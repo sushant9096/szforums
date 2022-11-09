@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="signup_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ffd86b;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Signup">
+   <top>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar style="-fx-border-color: #78746b; -fx-background-color: #ccaf60;" VBox.vgrow="ALWAYS">
+              <menus>
+                <Menu mnemonicParsing="false" style="-fx-background-color: #bfcc60;" text="SZ forums" />
+              </menus>
+            </MenuBar>
+            <HBox fx:id="top_hbox" spacing="10.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <TextField id="Username_in" fx:id="U_in" promptText="Username" HBox.hgrow="ALWAYS" />
+                  <PasswordField id="Password_in" fx:id="P_in" layoutX="10.0" layoutY="10.0" promptText="Password" HBox.hgrow="ALWAYS" />
+                  <Region HBox.hgrow="ALWAYS" />
+                  <Button id="btn_login" fx:id="login_btn" mnemonicParsing="false" onAction="#login" text="Login" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Button>
+                  <Button id="btn_signup" fx:id="signup_btn" mnemonicParsing="false" onAction="#getdata" text="Signup" HBox.hgrow="ALWAYS" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <VBox fx:id="center_vbox" prefHeight="200.0" prefWidth="100.0" spacing="16.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="#f520b1" strokeType="OUTSIDE" strokeWidth="0.0" text="Create your SZ forums account today. Its free and just take few minutes" VBox.vgrow="ALWAYS" />
+            <TextField fx:id="username_in" promptText="Username" VBox.vgrow="ALWAYS" />
+            <TextField fx:id="firstname_in" promptText="First Name" VBox.vgrow="ALWAYS" />
+            <TextField fx:id="lastname_in" promptText="Last Name" VBox.vgrow="ALWAYS" />
+            <TextField fx:id="email_in" promptText="Email" VBox.vgrow="ALWAYS" />
+            <TextField fx:id="occupation_in" promptText="Occupation" VBox.vgrow="ALWAYS" />
+            <PasswordField fx:id="password_in" promptText="Password" />
+            <PasswordField fx:id="confirmpassword_in" promptText="Confirm Password" />
+         </children>
+         <padding>
+            <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+         </padding>
+         <BorderPane.margin>
+            <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+   <bottom>
+      <HBox BorderPane.alignment="CENTER">
+         <children>
+            <ProgressBar maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" progress="1.0" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+   </bottom>
+   <left>
+      <HBox prefWidth="100.0" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <HBox prefWidth="100.0" BorderPane.alignment="CENTER" />
+   </right>
+</BorderPane>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #ffd86b; -fx-border-color: #c5b1e6;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Forumhome">
+   <top>
+      <MenuBar style="-fx-background-color: #ccaf60; -fx-border-color: #78746b;" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" style="-fx-background-color: #bfcc60;" text="SZ forum" />
+        </menus>
+      </MenuBar>
+   </top>
+   <left>
+      <HBox BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <children>
+            <VBox prefHeight="550.0" prefWidth="100.0" spacing="4.0" style="-fx-border-color: #c5b1e6;" HBox.hgrow="ALWAYS">
+               <children>
+                  <Button fx:id="queries_btn" mnemonicParsing="false" onAction="#gtThreads" prefHeight="25.0" prefWidth="98.0" style="-fx-background-color: #54e8d2;" text="Queries" textFill="#c41010" VBox.vgrow="ALWAYS" />
+                  <Button fx:id="new_query_btn" mnemonicParsing="false" onAction="#setQueries" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #54e8d2;" text="New Query" textFill="#0c0ceb" VBox.vgrow="ALWAYS" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </VBox>
+         </children>
+      </HBox>
+   </left>
+   <center>
+      <HBox BorderPane.alignment="CENTER">
+         <children>
+            <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" style="-fx-background-color: #c5b1e6;" HBox.hgrow="ALWAYS">
+               <content>
+                  <VBox fx:id="threads_container_vbox">
+                     <effect>
+                        <DropShadow color="#eeacce" />
+                     </effect>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </children>
+         <padding>
+            <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+         </padding>
+      </HBox>
+   </center>
+</BorderPane>
